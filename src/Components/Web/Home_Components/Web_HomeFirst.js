@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Div = styled.div`
@@ -15,6 +16,7 @@ const HomeFirst = () => {
     return (
         <Div>
             mainHomepage
+            <Link to="/card">카드로 이동하기</Link>
         </Div>
     );
 };

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
-import Minju from "../../../Assets/img/Minju.png";
 import { Link } from "react-router-dom";
 import Card1 from "../../../Assets/img/Card.jpg";
+import Minju from "../../../Assets/img/Minju.png";
 
 const Background = styled.div`
-    background-color: black;
+    background-color: gray;
 `;
 
 // 카드들을 담을 컨테이너 스타일링
@@ -20,7 +20,7 @@ const Container = styled.div`
 const CardContainer = styled.div`
     width: 400px;
     height: 500px;
-    perspective: 600px; 
+    perspective: 700px; 
     text-align: center;
     margin: 50px;
 `;
@@ -29,7 +29,7 @@ const CardContainer = styled.div`
 const Card = styled.div`
     width: 100%;
     height: 100%;
-    background-image: url(${Minju}); /* props로 전달된 이미지 URL 사용 */
+    background-image: url(${Card1}); 
     background-size: cover;
     border-radius: 10px;
     transition: transform 0.1s ease-in-out; 
@@ -37,16 +37,17 @@ const Card = styled.div`
     transform: ${props => props.isHovered ? `rotateY(${ -1/5 * props.offsetX + 20 }deg) rotateX(${4/30 * props.offsetY - 20 }deg)` : 'none'};
 `;
 
+
 // CardPage 컴포넌트
 const CardPage = () => {
     // 카드들의 상태를 관리하는 state
     const [cards, setCards] = useState([
-        { id: 1, offsetX: 0, offsetY: 0, isHovered: false,  },
-        { id: 2, offsetX: 0, offsetY: 0, isHovered: false,  },
-        { id: 3, offsetX: 0, offsetY: 0, isHovered: false },
-        { id: 4, offsetX: 0, offsetY: 0, isHovered: false },
-        { id: 5, offsetX: 0, offsetY: 0, isHovered: false },
-        { id: 6, offsetX: 0, offsetY: 0, isHovered: false },
+        { id: 1, offsetX: 0, offsetY: 0, isHovered: false, url: Minju },
+        { id: 2, offsetX: 0, offsetY: 0, isHovered: false, url: Card1 },
+        { id: 3, offsetX: 0, offsetY: 0, isHovered: false, url: Minju },
+        { id: 4, offsetX: 0, offsetY: 0, isHovered: false, url: Minju },
+        { id: 5, offsetX: 0, offsetY: 0, isHovered: false, url: Minju },
+        { id: 6, offsetX: 0, offsetY: 0, isHovered: false, url: Minju },
         // 필요한 만큼 카드 추가 가능
     ]);
 

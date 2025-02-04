@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -17,6 +17,7 @@ const HomeFirst = () => {
         <Div>
             mainHomepage
             <Link to="/card">카드로 이동하기</Link>
+            <Link to="/MousePage"> 마우스 커서 페이지로 이동하기 </Link>
         </Div>
     );
 };

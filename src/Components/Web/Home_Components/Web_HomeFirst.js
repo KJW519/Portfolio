@@ -18,6 +18,9 @@ const HomeFirst = () => {
             mainHomepage
             <Link to="/card">카드로 이동하기</Link>
             <Link to="/MousePage"> 마우스 커서 페이지로 이동하기 </Link>
+            <Link to="three3d">three 3d 페이지로 이동하기</Link>
+            <Link to="scroll">scroll 페이지로 이동하기</Link>
+            <Link to="melt" >melt 페이지로 이동하기</Link>
         </Div>
     );
 };
